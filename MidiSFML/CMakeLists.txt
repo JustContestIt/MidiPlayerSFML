@@ -2,15 +2,6 @@ cmake_minimum_required (VERSION 3.21.1)
 
 project(MidiPlayer)
 
-#find_package(Git QUIET)
-#if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
-#    option(GIT_SUBMODULE "Check submodules during build" ON)
-#    if(GIT_SUBMODULE)
-#        message(STATUS "Submodule update")
-#        execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
-#                WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-#                RESULT_VARIABLE GIT_SUBMOD_RESULT)
-
 add_subdirectory(libs/cxxmidi)
 add_subdirectory(libs/fluidsynth)
 add_subdirectory(libs/midifile)
