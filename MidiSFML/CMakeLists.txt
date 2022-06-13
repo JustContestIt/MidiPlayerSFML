@@ -1,53 +1,56 @@
 cmake_minimum_required (VERSION 3.21.1)
+
 project(MidiPlayer)
 
-#if( NOT SKIP_FIND_FOUNDATION_LIBRARY)
-#   find_library( FOUNDATION_LIBRARY Foundation)
-#   message( STATUS "FOUNDATION_LIBRARY is ${FOUNDATION_LIBRARY}")
-#endif()
-#if( NOT SKIP_FIND_FLUIDSYNTH_3_1_0_LIBRARY)
-#   find_library( FLUIDSYNTH_3_1_0_LIBRARY libs/fluidsynth.3.1.0)
-#   message( STATUS "FLUIDSYNTH_3_1_0_LIBRARY is ${FLUIDSYNTH_3_1_0_LIBRARY}")
-#endif()
+#find_package(Git QUIET)
+#if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
+#    option(GIT_SUBMODULE "Check submodules during build" ON)
+#    if(GIT_SUBMODULE)
+#        message(STATUS "Submodule update")
+#        execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
+#                WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+#                RESULT_VARIABLE GIT_SUBMOD_RESULT)
 
-set( DEPENDENCIES
-${FLUIDSYNTH_3_1_0_LIBRARY}
-${FOUNDATION_LIBRARY}
-)
+add_subdirectory(libs/cxxmidi)
+add_subdirectory(libs/fluidsynth)
+add_subdirectory(libs/midifile)
+add_subdirectory(libs/sfMidi)
+add_subdirectory(libs/SFML)
 
-set( SOURCES
-        App/AnimationHandler.cpp
-        App/App.cpp
-        App/AppPlayerState.cpp
-        App/AppStartState.cpp
-        App/AppState.cpp
-        App/TextureManager.cpp
-        MidiPlayer/Chord.cpp
-        MidiPlayer/MidiGenerator.cpp
-        MidiPlayer/MidiPlayer.cpp
-        MidiPlayer/Note.cpp
-        MidiPlayer/Parser.cpp
-        MidiPlayer/Song.cpp
-        MidiPlayer/SongLine.cpp
-        Utils/fileSystem.cpp
-        libs/midifile/Binasc.cpp
-        libs/midifile/MidiEvent.cpp
-        libs/midifile/MidiEventList.cpp
-        libs/midifile/MidiFile.cpp
-        libs/midifile/MidiMessage.cpp
-        libs/midifile/Options.cpp
-        libs/sfMidi/Loader.cpp
-        libs/sfMidi/Midi.cpp
-        libs/sfMidi/Music.cpp
-)
-
-
-##
-## MidiSFML
-##
+add_subdirectory(MidiPlayer)
+add_subdirectory(Utils)
+add_subdirectory(App)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
+target_include_directories(${PROJECT_NAME}
+        PUBLIC MidiPlayer/
+        PUBLIC Utils/
+        PUBLIC App/
+        PUBLIC libs/cxxmidi/include
+        PUBLIC libs/fluidsynth/include
+        PUBLIC libs/midifile/include
+        PUBLIC libs/sfMidi/include
+        PUBLIC libs/SFML/include
+)
+
+target_link_directories(${PROJECT_NAME}
+        PRIVATE MidiPlayer/
+        PRIVATE Utils/
+        PRIVATE App/
+        PRIVATE libs/fluidsynth/src
+        PRIVATE libs/midifile/src
+        PRIVATE libs/sfMidi/src
+        PRIVATE libs/SFML/src
+)
+
 target_link_libraries(${PROJECT_NAME}
-${DEPENDENCIES}
+        MidiPlayer_Src
+        Utils_Src
+        App_Src
+        cxxmidi
+        fluidsynth
+        midifile
+        sfMidi
+        SFML
 )

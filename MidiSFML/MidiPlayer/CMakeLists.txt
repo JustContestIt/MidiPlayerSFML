@@ -1,0 +1,16 @@
+add_library(MidiPlayer_Src
+        Chord.cpp
+        Chord.hpp
+        MidiGenerator.cpp
+        MidiGenerator.hpp
+        MidiPlayer.cpp
+        MidiPlayer.hpp
+        mNote.hpp
+        Note.cpp
+        Parser.cpp
+        Parser.hpp
+        Song.cpp
+        Song.hpp
+        SongLine.cpp
+        SongLine.hpp
+)
