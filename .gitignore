@@ -32,3 +32,4 @@
 *.app
 
 MidiSFML/res/synths/
+.idea
