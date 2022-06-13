@@ -14,7 +14,7 @@ CostDataFile:
 Site: LAPTOP-RCG7ACQO
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Win32-ninja
+BuildName: Win32-mingw32-make
 
 # Subprojects
 LabelsForSubprojects: 
@@ -27,7 +27,7 @@ NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
 ConfigureCommand: "C:/Program Files/JetBrains/CLion 2021.1.1/bin/cmake/win/bin/cmake.exe" "C:/Users/Никита/CLionProjects/MidiPlayerSFML/MidiSFML/libs/cxxmidi"
-MakeCommand: "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
+MakeCommand: C:/Program\ Files/JetBrains/CLion\ 2021.1.1/bin/cmake/win/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -44,7 +44,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: C:/Program Files/Git/cmd/git.exe
+GITCommand: 
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,12 +57,12 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: C:/Program Files/Git/cmd/git.exe
+UpdateCommand: 
 UpdateOptions: 
-UpdateType: git
+UpdateType: 
 
 # Compiler info
-Compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/c++.exe
+Compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe
 CompilerVersion: 8.1.0
 
 # Dynamic analysis (MemCheck)
