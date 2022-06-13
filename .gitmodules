@@ -1,0 +1,15 @@
+[submodule "MidiSFML/libs/SFML"]
+	path = MidiSFML/libs/SFML
+	url = https://github.com/SFML/SFML.git
+[submodule "MidiSFML/libs/fluidsynth"]
+	path = MidiSFML/libs/fluidsynth
+	url = https://github.com/FluidSynth/fluidsynth.git
+[submodule "MidiSFML/libs/cxxmidi"]
+	path = MidiSFML/libs/cxxmidi
+	url = https://github.com/5tan/cxxmidi.git
+[submodule "MidiSFML/libs/sfMidi"]
+	path = MidiSFML/libs/sfMidi
+	url = https://github.com/eXpl0it3r/sfMidi.git
+[submodule "MidiSFML/libs/midifile"]
+	path = MidiSFML/libs/midifile
+	url = https://github.com/craigsapp/midifile.git
