@@ -11,13 +11,13 @@
 
 
 fileSystem::fileSystem(std::string root){
-    _root = std::filesystem::path(root + "/");
+    _root = fileSystem::path(root + "/");
     
 }
 
 void fileSystem::setRoot(std::string path){
-    _root = std::filesystem::path(path).parent_path();
-    _root = std::filesystem::path(_root+"/");
+    _root = fileSystem::path(path).parent_path();
+    _root = fileSystem::path(_root+"/");
 }
 
 
@@ -27,7 +27,7 @@ std::string fileSystem::getRoot(){
 
 
 std::string fileSystem::pathToResousers(){
-    return std::filesystem::path(_root + "res/");;
+    return fileSystem::path(_root + "res/");;
 }
 
 std::string fileSystem::pathToSynths(){
@@ -35,16 +35,16 @@ std::string fileSystem::pathToSynths(){
 }
 
 std::string fileSystem::pathToMidis(){
-    return std::filesystem::path(pathToResousers() + "midis/");
+    return fileSystem::path(pathToResousers() + "midis/");
 }
 
 std::string fileSystem::pathToGeneratedMidis(){
-    return std::filesystem::path(pathToResousers() + "generatedMidis/");
+    return fileSystem::path(pathToResousers() + "generatedMidis/");
 }
 
 std::vector<std::string> fileSystem::fileList(std::string path){
     std::vector<std::string> files;
-    for (const auto & entry : std::filesystem::directory_iterator(path))
+    for (const auto & entry : fileSystem::directory_iterator(path))
         files.push_back(entry.path().filename());
     return files;
 }

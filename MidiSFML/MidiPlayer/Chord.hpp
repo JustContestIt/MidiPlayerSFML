@@ -9,7 +9,7 @@
 #ifndef Chord_hpp
 #define Chord_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include <iostream>
 #include <vector>
 #include "mNote.hpp"

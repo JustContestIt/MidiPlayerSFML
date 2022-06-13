@@ -10,7 +10,7 @@
 
 
 
-std::string MidiGenerator::generateMidi(Song &song, std::string exportDir){
+std::string MidiGenerator::generateMidi(Song &song, const std::string& exportDir){
     cxxmidi::File file;
     
     for (SongLine &line: song.getLines()){
