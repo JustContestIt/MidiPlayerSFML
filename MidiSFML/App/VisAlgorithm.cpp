@@ -7,6 +7,7 @@
 //
 
 #include "VisAlgorithm.hpp"
+#include "../lib/SFML/Graphics/Color.hpp"
 
 
 VisAlgorith::VisAlgorith(Song& song, int windowWidth, int windowHeight){

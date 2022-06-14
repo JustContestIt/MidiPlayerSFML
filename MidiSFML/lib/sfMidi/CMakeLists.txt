@@ -1,0 +1,9 @@
+add_library(sfMidiLib
+        Error.h
+        Loader.cpp
+        Loader.h
+        Midi.cpp
+        Midi.h
+        Music.cpp
+        Music.h
+)

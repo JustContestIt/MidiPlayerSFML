@@ -149,8 +149,6 @@ class Binasc {
 		int  getWord        (std::string& word, const std::string& input,
 		                     const std::string& terminators, int index);
 
-		static const char *GMinstrument[128];
-
 };
 
 } // end of namespace smf

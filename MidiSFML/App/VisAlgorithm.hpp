@@ -9,7 +9,7 @@
 #ifndef VisAlgorithm_hpp
 #define VisAlgorithm_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "../MidiPlayer/Song.hpp"

@@ -1,1 +1,0 @@
-cmd='C:/Program Files/JetBrains/CLion 2021.1.1/bin/cmake/win/bin/cmake.exe;-DCMAKE_VERBOSE_MAKEFILE=FALSE;-G;Ninja;-B;C:/Users/Никита/CLionProjects/MidiPlayerSFML/MidiSFML/cmake-build-debug/libs/fluidsynth/src/gentables;C:/Users/Никита/CLionProjects/MidiPlayerSFML/MidiSFML/libs/fluidsynth/src/gentables'

@@ -1,0 +1,13 @@
+add_library(CxxMidiLib
+        file.hpp
+        sysex.hpp
+        player
+        event.hpp
+        output
+        message.hpp
+        guts
+        track.hpp
+        instrument.hpp
+        note.hpp
+        converters.hpp
+)

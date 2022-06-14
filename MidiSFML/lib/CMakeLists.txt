@@ -1,28 +1,13 @@
-add_library(ExternalLib
+add_subdirectory(cxxmidi)
+add_subdirectory(fluidsynth)
+add_subdirectory(midifile)
+add_subdirectory(sfMidi)
+
+add_library(ExternalLibs
+        cxxmidi
+        fluidsynth
+        midifile
+        sfMidi
         fluidsynth.h
         sfMidi.h
-        fluidsynth/audio.h
-        fluidsynth/event.h
-        fluidsynth/gen.h
-        fluidsynth/ladspa.h
-        fluidsynth/log.h
-        fluidsynth/midi.h
-        fluidsynth/misc.h
-        fluidsynth/mod.h
-        fluidsynth/seq.h
-        fluidsynth/seqbind.h
-        fluidsynth/settings.h
-        fluidsynth/sfont.h
-        fluidsynth/shell.h
-        fluidsynth/synth.h
-        fluidsynth/types.h
-        fluidsynth/version.h
-        fluidsynth/voice.h
-        sfMidi/Error.h
-        sfMidi/Loader.cpp
-        sfMidi/Loader.h
-        sfMidi/Midi.cpp
-        sfMidi/Midi.h
-        sfMidi/Music.cpp
-        sfMidi/Music.h
 )

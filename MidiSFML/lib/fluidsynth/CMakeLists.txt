@@ -1,0 +1,20 @@
+add_library(FluidSynthLib
+        voice.h
+        libfluidsynth.3.1.0.dylib
+        seqbind.h
+        types.h
+        settings.h
+        version.h
+        audio.h
+        log.h
+        misc.h
+        shell.h
+        sfont.h
+        mod.h
+        synth.h
+        ladspa.h
+        midi.h
+        seq.h
+        event.h
+        gen.h
+)

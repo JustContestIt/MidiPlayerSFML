@@ -9,12 +9,16 @@
 #include "App.hpp"
 
  
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
+#include "../lib/SFML/Graphics.hpp"
+#include "../lib/SFML/System.hpp"
  
 #include "App.hpp"
+#include "../lib/SFML/Window/VideoMode.hpp"
+#include "../lib/SFML/Graphics/RectangleShape.hpp"
+#include "../lib/SFML/System/Vector2.hpp"
+#include "../lib/sfMidi/Midi.h"
 
- 
+
 App::App(int argc, char const** argv)
 {
     _fs.setRoot(argv[0]);
@@ -41,7 +45,7 @@ void App::config(){
     std::cout << "2. Play from txt" << std::endl;
     
     
-    while(playMode==""){
+    while(playMode.empty()){
         int key_in;
         std::cin >> key_in;
         switch (key_in) {
@@ -65,7 +69,7 @@ void App::config(){
             start++;
         }
         std::string file;
-        while (file==""){
+        while (file.empty()){
             int key_in = 0;
             std::cin >> key_in;
             if(key_in>=1 && key_in<=files.size()){
@@ -88,7 +92,7 @@ void App::config(){
         std::cout << start << ". " << file << std::endl;
         start++;
     }
-    while(_synthPath==""){
+    while(_synthPath.empty()){
         int key_in = 0;
         std::cin >> key_in;
         if(key_in>=1 && key_in<=files.size()){
@@ -118,7 +122,7 @@ void App::start(){
     sfmidi::Midi player(_synthPath, _filePath);
     if (player.hasError()) {
       std::cout<<player.getError();
-      return 1;
+      return;
     }
     double gain = 1.0;
     player.setGain(gain);

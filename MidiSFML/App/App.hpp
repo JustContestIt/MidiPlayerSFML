@@ -9,7 +9,7 @@
 #ifndef App_hpp
 #define App_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include <stack>
 #include <SFML/Graphics.hpp>
 #include "../Utils/fileSystem.hpp"

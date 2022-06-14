@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/Никита/CLionProjects/MidiPlayerSFML/MidiSFML/cmake-build-debug/libs/cxxmidi/tests/tests[1]_tests.cmake")
-  include("C:/Users/Никита/CLionProjects/MidiPlayerSFML/MidiSFML/cmake-build-debug/libs/cxxmidi/tests/tests[1]_tests.cmake")
-else()
-  add_test(tests_NOT_BUILT tests_NOT_BUILT)
-endif()

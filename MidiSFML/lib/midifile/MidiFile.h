@@ -254,7 +254,6 @@ class MidiFile {
 		                                              double value);
 		static std::ostream& writeBigEndianDouble    (std::ostream& out,
 		                                              double value);
-		static std::string   getGMInstrumentName     (int patchIndex);
 
 	protected:
 		// m_events == Lists of MidiEvents for each MIDI file track.
@@ -309,10 +308,8 @@ class MidiFile {
 		double      linearSecondInterpolationAtTick (int ticktime);
 		std::string base64Encode                    (const std::string &input);
 		std::string base64Decode                    (const std::string &input);
-
 		static const std::string encodeLookup;
 		static const std::vector<int> decodeLookup;
-		static const char *GMinstrument[128];
 };
 
 } // end of namespace smf

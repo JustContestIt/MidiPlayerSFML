@@ -1,0 +1,14 @@
+add_library(MidiFileLib
+        MidiMessage.cpp
+        MidiEvent.h
+        Binasc.h
+        MidiFile.h
+        Options.cpp
+        MidiMessage.h
+        MidiEventList.cpp
+        Binasc.cpp
+        Options.h
+        MidiEventList.h
+        MidiEvent.cpp
+        MidiFile.cpp
+)
