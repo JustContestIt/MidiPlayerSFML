@@ -29,7 +29,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef INCLUDE_CXXMIDI_OUTPUT_LINUX_ALSA_HPP_
 #define INCLUDE_CXXMIDI_OUTPUT_LINUX_ALSA_HPP_
 
-#include <alsa/asoundlib.h>
+#include "asoundlib.h"
 #include <pthread.h>
 #include <sys/time.h>
 
@@ -39,7 +39,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <string>
 #include <vector>
 
-#include <cxxmidi/output/abstract.hpp>
+#include "../abstract.hpp"
 
 namespace cxxmidi {
 namespace output {

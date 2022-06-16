@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 3.21.1)
 
-project(MidiPlayerApp)
+project(MidiPlayerApp CXX)
+
+#target_compile_options( ${PROJECT_NAME} PUBLIC -std=c++17 -fpermissive -w -Wall )
 
 add_subdirectory(MidiPlayer)
 add_subdirectory(Utils)
@@ -12,13 +14,12 @@ target_include_directories(${PROJECT_NAME}
         PUBLIC MidiPlayer/
         PUBLIC Utils/
         PUBLIC App/
-
 )
 
 target_link_directories(${PROJECT_NAME}
-        PRIVATE MidiPlayer/
-        PRIVATE Utils/
-        PRIVATE App/
+        PUBLIC MidiPlayer/
+        PUBLIC Utils/
+        PUBLIC App/
 )
 
 target_link_libraries(${PROJECT_NAME}

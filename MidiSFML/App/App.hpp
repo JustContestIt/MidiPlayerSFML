@@ -11,12 +11,12 @@
 
 #include <cstdio>
 #include <stack>
-#include <SFML/Graphics.hpp>
+#include "../lib/SFML/Graphics.hpp"
 #include "../Utils/fileSystem.hpp"
 #include "../MidiPlayer/MidiGenerator.hpp"
 #include "../MidiPlayer/Parser.hpp"
 #include "VisAlgorithm.hpp"
-#include "sfMidi.h"
+#include "../lib/sfMidi.h"
  
 class AppState;
  

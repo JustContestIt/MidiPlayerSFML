@@ -230,6 +230,4 @@ void App::start(){
     }
 
     player.stop();
-
-    return 0;
 }

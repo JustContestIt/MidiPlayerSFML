@@ -12,18 +12,18 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include <filesystem>
 #include <vector>
+#include <filesystem>
 
 class fileSystem{
 private:
     std::string _root;
 public:
-    fileSystem(){};
+    fileSystem()= default;
     void setRoot(std::string path);
-    fileSystem(std::string root);
+    explicit fileSystem(std::string root);
     std::string getRoot();
-    std::string pathToResousers();
+    std::string pathToResourcers();
     std::string pathToSynths();
     std::string pathToMidis();
     std::string pathToGeneratedMidis();

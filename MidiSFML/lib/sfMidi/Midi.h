@@ -34,7 +34,7 @@
 
 #include <string>
 #include <vector>
-#include <SFML/Audio.hpp>
+#include "../SFML/Audio.hpp"
 
 #include "Error.h"
 

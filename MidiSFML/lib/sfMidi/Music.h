@@ -33,7 +33,7 @@
 #define SFMIDI_MUSIC_H
 
 #include <string>
-#include <SFML/Audio.hpp>
+#include "../SFML/Audio.hpp"
 
 #include "Error.h"
 #include "Loader.h"

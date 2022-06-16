@@ -102,11 +102,11 @@ class PlayerBase {
 }  // namespace guts
 }  // namespace cxxmidi
 
-#include "converters.hpp"
-#include "event.hpp"
-#include "file.hpp"
+#include "../converters.hpp"
+#include "../event.hpp"
+#include "../file.hpp"
 #include "utils.hpp"
-#include "abstract.hpp"
+#include "../output/abstract.hpp"
 
 namespace cxxmidi {
 namespace guts {
