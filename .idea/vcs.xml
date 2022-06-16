@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MidiSFML/libs/SFML" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MidiSFML/libs/cxxmidi" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MidiSFML/libs/fluidsynth" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MidiSFML/libs/midifile" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MidiSFML/libs/sfMidi" vcs="Git" />
   </component>
 </project>
